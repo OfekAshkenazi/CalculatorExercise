@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">CalculatorExercise</string>
+    <string name="numberTVdefault">0</string>
+    <string name="ansTVdefault">=</string>
+</resources>

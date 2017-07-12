@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/NumbersTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="sans-serif-smallcaps"
+            android:gravity="right"
+            android:hint="@string/numberTVdefault"
+            android:textAppearance="@style/TextAppearance.AppCompat.Light.Widget.PopupMenu.Small"
+            android:textSize="40sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/AnsTV"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/AnsTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text="@string/ansTVdefault"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.686" />
+    </android.support.constraint.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.5"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <Objects.DescButton
+                    android:id="@+id/Num7Btn"
+                    style="@style/Widget.AppCompat.Button"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:lineSpacingExtra="36sp"
+                    android:text="7"
+                    android:textAllCaps="false"
+                    android:textSize="36sp"
+                    android:textStyle="bold" />
+
+                <Objects.DescButton
+                    android:id="@+id/Num8Btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="8"
+                    android:textAllCaps="false"
+                    android:textSize="36sp"
+                    android:textStyle="bold" />
+
+                <Objects.DescButton
+                    android:id="@+id/Num9Btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="9"
+                    android:textSize="36sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <Objects.DescButton
+                    android:id="@+id/Num4Btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:lineSpacingExtra="36sp"
+                    android:text="4"
+                    android:textAllCaps="false"
+                    android:textSize="36sp"
+                    android:textStyle="bold" />
+
+                <Objects.DescButton
+                    android:id="@+id/Num5Btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:lineSpacingExtra="36sp"
+                    android:text="5"
+                    android:textAllCaps="false"
+                    android:textSize="36sp"
+                    android:textStyle="bold" />
+
+                <Objects.DescButton
+                    android:id="@+id/Num6Btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:lineSpacingExtra="36sp"
+                    android:text="6"
+                    android:textAllCaps="false"
+                    android:textSize="36sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <Objects.DescButton
+                    android:id="@+id/Num1Btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:lineSpacingExtra="36sp"
+                    android:text="1"
+                    android:textAllCaps="false"
+                    android:textSize="36sp"
+                    android:textStyle="bold" />
+
+                <Objects.DescButton
+                    android:id="@+id/Num2Btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:lineSpacingExtra="36sp"
+                    android:text="2"
+                    android:textAllCaps="false"
+                    android:textSize="36sp"
+                    android:textStyle="bold" />
+
+                <Objects.DescButton
+                    android:id="@+id/Num3Btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:lineSpacingExtra="36sp"
+                    android:text="3"
+                    android:textAllCaps="false"
+                    android:textSize="36sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <Objects.DescButton
+                    android:id="@+id/Num0Btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="0"
+                    android:textAllCaps="false"
+                    android:textSize="36sp"
+                    android:textStyle="bold" />
+
+                <Objects.DescButton
+                    android:id="@+id/DotBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="."
+                    android:textSize="36sp"
+                    android:textStyle="bold" />
+
+                <Objects.DescButton
+                    android:id="@+id/EqualsBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="="
+                    android:textSize="36sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="6"
+            android:orientation="vertical">
+
+            <Objects.DescButton
+                android:id="@+id/PlusBtn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:lineSpacingExtra="36sp"
+                android:text="+"
+                android:textAllCaps="false"
+                android:textSize="36sp"
+                android:textStyle="bold" />
+
+            <Objects.DescButton
+                android:id="@+id/MinBtn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:lineSpacingExtra="36sp"
+                android:text="-"
+                android:textAllCaps="false"
+                android:textSize="36sp"
+                android:textStyle="bold" />
+
+            <Objects.DescButton
+                android:id="@+id/slashBtn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:lineSpacingExtra="36sp"
+                android:text="/"
+                android:textAllCaps="false"
+                android:textSize="36sp"
+                android:textStyle="bold" />
+
+            <Objects.DescButton
+                android:id="@+id/AsterixBtn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:lineSpacingExtra="36sp"
+                android:text="*"
+                android:textAllCaps="false"
+                android:textSize="36sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/delBtn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="EC"
+            android:textSize="36sp" />
+
+        <Button
+            android:id="@+id/clearAllBtn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="C"
+            android:textSize="36sp" />
+
+    </LinearLayout>
+
+</LinearLayout>
