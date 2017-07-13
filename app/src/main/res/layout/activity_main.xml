@@ -2,36 +2,22 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/background_light"
+    android:orientation="vertical">
 
     <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1">
 
-        <TextView
-            android:id="@+id/NumbersTV"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:fontFamily="sans-serif-smallcaps"
-            android:gravity="right"
-            android:hint="@string/numberTVdefault"
-            android:textAppearance="@style/TextAppearance.AppCompat.Light.Widget.PopupMenu.Small"
-            android:textSize="40sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/AnsTV"
-            app:layout_constraintVertical_bias="1.0" />
-
-        <TextView
+        <me.grantland.widget.AutofitTextView
             android:id="@+id/AnsTV"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="45dp"
             android:gravity="right"
+            android:maxLines="1"
             android:text="@string/ansTVdefault"
             android:textSize="30sp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -39,7 +25,52 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.686" />
+            app:layout_constraintVertical_bias="0.725"
+            app:minTextSize="10sp" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0">
+
+            <TextView
+                android:id="@+id/NumbersTV"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:fontFamily="sans-serif-smallcaps"
+                android:gravity="right"
+                android:hint="@string/numberTVdefault"
+                android:textAppearance="@style/TextAppearance.AppCompat.Light.Widget.PopupMenu.Small"
+                android:textSize="36sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@+id/delBtn"
+                app:layout_constraintTop_toTopOf="@+id/AnsTV"
+                app:layout_constraintVertical_bias="0.978" />
+
+            <Button
+                android:id="@+id/delBtn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="10"
+                android:background="@android:drawable/ic_input_delete"
+                android:backgroundTint="?attr/colorButtonNormal"
+                android:textSize="36sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.993" />
+        </LinearLayout>
     </android.support.constraint.ConstraintLayout>
 
     <LinearLayout
@@ -60,36 +91,41 @@
                 android:layout_weight="1"
                 android:orientation="horizontal">
 
-                <Objects.DescButton
+                <widgets.DescButton
                     android:id="@+id/Num7Btn"
                     style="@style/Widget.AppCompat.Button"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:fontFamily="monospace"
                     android:lineSpacingExtra="36sp"
                     android:text="7"
                     android:textAllCaps="false"
+                    android:textColor="@android:color/white"
                     android:textSize="36sp"
                     android:textStyle="bold" />
 
-                <Objects.DescButton
+                <widgets.DescButton
                     android:id="@+id/Num8Btn"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:fontFamily="monospace"
                     android:text="8"
                     android:textAllCaps="false"
-                    android:textSize="36sp"
-                    android:textStyle="bold" />
+                    android:textColor="@android:color/white"
+                    android:textSize="36sp" />
 
-                <Objects.DescButton
+                <widgets.DescButton
                     android:id="@+id/Num9Btn"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:fontFamily="monospace"
                     android:text="9"
-                    android:textSize="36sp"
-                    android:textStyle="bold" />
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:textSize="36sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -98,38 +134,41 @@
                 android:layout_weight="1"
                 android:orientation="horizontal">
 
-                <Objects.DescButton
+                <widgets.DescButton
                     android:id="@+id/Num4Btn"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:fontFamily="monospace"
                     android:lineSpacingExtra="36sp"
                     android:text="4"
                     android:textAllCaps="false"
-                    android:textSize="36sp"
-                    android:textStyle="bold" />
+                    android:textColor="@android:color/white"
+                    android:textSize="36sp" />
 
-                <Objects.DescButton
+                <widgets.DescButton
                     android:id="@+id/Num5Btn"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:fontFamily="monospace"
                     android:lineSpacingExtra="36sp"
                     android:text="5"
                     android:textAllCaps="false"
-                    android:textSize="36sp"
-                    android:textStyle="bold" />
+                    android:textColor="@android:color/white"
+                    android:textSize="36sp" />
 
-                <Objects.DescButton
+                <widgets.DescButton
                     android:id="@+id/Num6Btn"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:fontFamily="monospace"
                     android:lineSpacingExtra="36sp"
                     android:text="6"
                     android:textAllCaps="false"
-                    android:textSize="36sp"
-                    android:textStyle="bold" />
+                    android:textColor="@android:color/white"
+                    android:textSize="36sp" />
 
             </LinearLayout>
 
@@ -139,38 +178,41 @@
                 android:layout_weight="1"
                 android:orientation="horizontal">
 
-                <Objects.DescButton
+                <widgets.DescButton
                     android:id="@+id/Num1Btn"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:fontFamily="monospace"
                     android:lineSpacingExtra="36sp"
                     android:text="1"
                     android:textAllCaps="false"
-                    android:textSize="36sp"
-                    android:textStyle="bold" />
+                    android:textColor="@android:color/white"
+                    android:textSize="36sp" />
 
-                <Objects.DescButton
+                <widgets.DescButton
                     android:id="@+id/Num2Btn"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:fontFamily="monospace"
                     android:lineSpacingExtra="36sp"
                     android:text="2"
                     android:textAllCaps="false"
-                    android:textSize="36sp"
-                    android:textStyle="bold" />
+                    android:textColor="@android:color/white"
+                    android:textSize="36sp" />
 
-                <Objects.DescButton
+                <widgets.DescButton
                     android:id="@+id/Num3Btn"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:fontFamily="monospace"
                     android:lineSpacingExtra="36sp"
                     android:text="3"
                     android:textAllCaps="false"
-                    android:textSize="36sp"
-                    android:textStyle="bold" />
+                    android:textColor="@android:color/white"
+                    android:textSize="36sp" />
 
             </LinearLayout>
 
@@ -180,31 +222,36 @@
                 android:layout_weight="1"
                 android:orientation="horizontal">
 
-                <Objects.DescButton
+                <widgets.DescButton
                     android:id="@+id/Num0Btn"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:fontFamily="monospace"
                     android:text="0"
                     android:textAllCaps="false"
-                    android:textSize="36sp"
-                    android:textStyle="bold" />
+                    android:textColor="@android:color/white"
+                    android:textSize="36sp" />
 
-                <Objects.DescButton
+                <widgets.DescButton
                     android:id="@+id/DotBtn"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:fontFamily="monospace"
                     android:text="."
-                    android:textSize="36sp"
-                    android:textStyle="bold" />
+                    android:textColor="@android:color/white"
+                    android:textSize="36sp" />
 
-                <Objects.DescButton
+                <widgets.DescButton
                     android:id="@+id/EqualsBtn"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:backgroundTint="@android:color/holo_orange_dark"
+                    android:fontFamily="monospace"
                     android:text="="
+                    android:textColor="@android:color/white"
                     android:textSize="36sp" />
             </LinearLayout>
         </LinearLayout>
@@ -215,70 +262,70 @@
             android:layout_weight="6"
             android:orientation="vertical">
 
-            <Objects.DescButton
+            <widgets.DescButton
                 android:id="@+id/PlusBtn"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:backgroundTint="@android:color/background_dark"
+                android:fontFamily="monospace"
                 android:lineSpacingExtra="36sp"
                 android:text="+"
                 android:textAllCaps="false"
-                android:textSize="36sp"
-                android:textStyle="bold" />
+                android:textColor="@android:color/white"
+                android:textSize="36sp" />
 
-            <Objects.DescButton
+            <widgets.DescButton
                 android:id="@+id/MinBtn"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:backgroundTint="@android:color/background_dark"
+                android:fontFamily="monospace"
                 android:lineSpacingExtra="36sp"
                 android:text="-"
                 android:textAllCaps="false"
-                android:textSize="36sp"
-                android:textStyle="bold" />
+                android:textColor="@android:color/white"
+                android:textSize="36sp" />
 
-            <Objects.DescButton
+            <widgets.DescButton
                 android:id="@+id/slashBtn"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:backgroundTint="@android:color/background_dark"
+                android:fontFamily="monospace"
                 android:lineSpacingExtra="36sp"
                 android:text="/"
                 android:textAllCaps="false"
-                android:textSize="36sp"
-                android:textStyle="bold" />
+                android:textColor="@android:color/white"
+                android:textSize="36sp" />
 
-            <Objects.DescButton
+            <widgets.DescButton
                 android:id="@+id/AsterixBtn"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
+                android:backgroundTint="@android:color/background_dark"
+                android:fontFamily="monospace"
                 android:lineSpacingExtra="36sp"
                 android:text="*"
                 android:textAllCaps="false"
-                android:textSize="36sp"
-                android:textStyle="bold" />
+                android:textColor="@android:color/white"
+                android:textSize="36sp" />
         </LinearLayout>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.5"
+        android:layout_weight="0.3"
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/delBtn"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:text="EC"
-            android:textSize="36sp" />
-
-        <Button
             android:id="@+id/clearAllBtn"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="C"
             android:textSize="36sp" />

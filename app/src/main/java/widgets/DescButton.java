@@ -1,4 +1,4 @@
-package Objects;
+package widgets;
 
 import android.content.Context;
 import android.util.AttributeSet;

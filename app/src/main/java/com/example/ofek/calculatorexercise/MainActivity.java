@@ -7,7 +7,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import Objects.DescButton;
+import widgets.DescButton;
 
 public class MainActivity extends AppCompatActivity {
     TextView numbersTV,ansTV;
@@ -116,7 +116,7 @@ public class MainActivity extends AppCompatActivity {
                 lastNum=lastNum.substring(1);
                 String currentNumStr="";
                 if (currntNum%1==0){                                                //just for a nicer interface
-                    currentNumStr+=((int)currntNum);
+                    currentNumStr+=(long)(currntNum);
                 }
                 else {
                     currentNumStr+=currntNum;
